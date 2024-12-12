@@ -2,15 +2,15 @@ import { Link } from "react-router-dom"
 
 function MainNav() {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top bg-dark navbar-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container">
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                            <Link className="nav-link" to="/" style={{ color: '#02263f' }}>Home</Link>
+                            <Link className="nav-link" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/login" style={{ color: '#02263f' }}>Login</Link>
+                            <Link className="nav-link" to="/login" >Login</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/game">Game</Link>
@@ -23,6 +23,9 @@ function MainNav() {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/game4">Game4</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/game5">Game5</Link>
                         </li>
                     </ul>
                 </div>

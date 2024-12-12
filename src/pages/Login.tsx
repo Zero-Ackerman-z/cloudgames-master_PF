@@ -14,8 +14,8 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
         const rutaServicio = ApiWebURL + "user_login.php";
         let formData = new FormData();
-        formData.append("username", dataForm.get("usuario") as string); // Cambié "usuario" a "username"
-        formData.append("password", dataForm.get("clave") as string);   // Cambié "clave" a "password"
+        formData.append("username", dataForm.get("usuario") as string);
+        formData.append("password", dataForm.get("clave") as string);  
 
         try {
             const response = await fetch(rutaServicio, { method: "POST", body: formData });
@@ -26,10 +26,10 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                     alert(`Bienvenido, ${result.username}`);
                     localStorage.setItem("userId", result.userId);
                     localStorage.setItem("username", result.username);
-                    onLogin(result); // Llamar a onLogin con los datos del usuario
-                    navigate("/game"); // Redirigir a la página del juego
+                    onLogin(result); 
+                    navigate("/game"); 
                 } else {
-                    alert(result.message); // Si el login falló, mostrar el mensaje
+                    alert(result.message); 
                 }
             } else {
                 alert(result.error || "Hubo un problema al intentar iniciar sesión.");
@@ -39,7 +39,6 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
             alert("Hubo un problema al intentar iniciar sesión.");
         }
     };
-
     return (
         <section className="p-5 bg-light">
             <div className="container">
@@ -73,10 +72,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                                         </button>
                                     </div>
                                 </form>
-                                <div className="text-center">
-                                    <p><a href="/forgot-password" className="text-decoration-none">¿Olvidaste tu contraseña?</a></p>
-                                    <p>¿No tienes cuenta? <a href="/register" className="text-decoration-none">Regístrate</a></p>
-                                </div>
+
                             </div>
                         </div>
                     </div>

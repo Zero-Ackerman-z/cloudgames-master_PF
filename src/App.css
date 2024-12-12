@@ -3,8 +3,8 @@
 .centered-container {
   position: relative;
 
-  background-color: #333; /* Change to your preferred background color */
-  color: #fff; /* Change to your preferred text color */
+  background-color: #000000; /* Change to your preferred background color */
+  color: #ffffff; /* Change to your preferred text color */
 }
 
 
@@ -24,24 +24,22 @@
   border-radius: 10px; /* Add border radius for a cooler look */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
 }
-
 .navbar {
-  background-color: #6d6969;
+  background-color: #000000 !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 80px;
   padding: 10px 0;
-  background-color: rgba(255, 255, 255, 0.7); /* white color with 70% opacity */
 }
-
 .navbar-brand {
   font-size: 28px;
   font-weight: bold;
-  color: #3e4547;
+  color: #ffffff; /* Blanco para contraste */
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00; 
 }
 
 .navbar-toggler {
   border: none;
-  background-color: transparent;
+  background-color: #000000;
 }
 
 .navbar-toggler-icon {
@@ -52,14 +50,17 @@
 }
 
 .navbar-nav .nav-link {
-  color: #02263f;
+  color: #ffffff; /* Blanco base */
   font-size: 18px;
   margin-right: 30px;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+  transition: all 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #520366;
-  text-decoration: none;
+  color: #00ff00;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+  text-decoration: none; 
 }
 
 @media (max-width: 991px) {

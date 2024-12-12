@@ -1,5 +1,64 @@
-#main-footer{
-    background-color: var(--color-gris-oscuro);
-    color: var(--color-gris-claro);
+@keyframes neonPath {
+    0% {
+        border-image: linear-gradient(90deg, #1E90FF, #1E90FF, #000000); 
+        border-image-slice: 1;
+        border-width: 4px;
+        box-shadow: 0 0 10px #1E90FF, 0 0 20px #1E90FF, 0 0 30px #1E90FF;
+    }
+    25% {
+        border-image: linear-gradient(180deg, #1E90FF, #00EBF0, #000000); 
+        border-image-slice: 1;
+        border-width: 4px;
+        box-shadow: 0 0 10px #1E90FF, 0 0 20px #1E90FF, 0 0 30px #00EBF0;
+    }
+    50% {
+        border-image: linear-gradient(270deg, #00EBF0, #1E90FF, #000000); 
+        border-image-slice: 1;
+        border-width: 4px;
+        box-shadow: 0 0 10px #00EBF0, 0 0 20px #1E90FF, 0 0 30px #00EBF0;
+    }
+    75% {
+        border-image: linear-gradient(360deg, #1E90FF, #00EBF0, #000000); 
+        border-image-slice: 1;
+        border-width: 4px;
+        box-shadow: 0 0 10px #1E90FF, 0 0 20px #00EBF0, 0 0 30px #1E90FF;
+    }
+    100% {
+        border-image: linear-gradient(90deg, #1E90FF, #1E90FF, #000000);
+        border-image-slice: 1;
+        border-width: 4px;
+        box-shadow: 0 0 10px #1E90FF, 0 0 20px #1E90FF, 0 0 30px #1E90FF;
+    }
+}
+
+@keyframes neonTextGlow {
+    0% {
+        text-shadow: 0 0 10px #00EBF0, 0 0 20px #00EBF0, 0 0 30px #1E90FF, 0 0 40px #1E90FF;
+    }
+    50% {
+        text-shadow: 0 0 5px #00EBF0, 0 0 10px #00EBF0, 0 0 15px #1E90FF;
+    }
+    100% {
+        text-shadow: 0 0 10px #00EBF0, 0 0 20px #00EBF0, 0 0 30px #1E90FF, 0 0 40px #1E90FF;
+    }
+}
+
+#main-footer {
+    background-color: #000000; /* Fondo negro */
     padding: 45px 0;
+    text-align: center;
+    border: 4px solid transparent; /* Contorno inicial transparente */
+    border-image: linear-gradient(90deg, #1E90FF, #1E90FF, #000000); /* Contorno inicial */
+    border-image-slice: 1;
+    box-shadow: 0 0 20px rgba(0, 235, 240, 0.8), 0 0 30px rgba(0, 90, 255, 0.7); /* Efecto de resplandor */
+    animation: neonPath 6s linear infinite; /* Recorrido del borde por todo el cuadro */
+    position: relative;
+}
+
+#main-footer .container {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF; /* Texto blanco */
+    animation: neonTextGlow 3s ease-in-out infinite; /* Animación de texto neón */
 }

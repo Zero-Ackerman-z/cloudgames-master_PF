@@ -1,6 +1,6 @@
 import {Unity, useUnityContext} from "react-unity-webgl";
 
-function Game3() {
+function Game4() {
     const { unityProvider, sendMessage } = useUnityContext({
         loaderUrl: "/CloudBuid3.loader.js",
         dataUrl: "/CloudBuid3.data",
@@ -30,4 +30,4 @@ function Game3() {
 }
 
 
-export default Game3
+export default Game4

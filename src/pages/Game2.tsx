@@ -9,7 +9,7 @@ function Game2() {
     });
 
     function handleClickRestartLevel() {
-        sendMessage("GameManger", "RestartLevel");
+        sendMessage("GameManager", "RestartLevel");
     }
     return (
         <>
